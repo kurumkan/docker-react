@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-app:
+    build: # define our custom Dockerfile path
+      context: . # root dir - where to start lookup
+      dockerfile: Dockerfile.dev
+    restart: always # when to restart?
+    ports:
+      - "3000:3000" # port forwading
+    volumes:
+      - /app/node_modules # bookmarking volumes
+      - .:/app/ # a real docker volume

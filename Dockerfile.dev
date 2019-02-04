@@ -1,0 +1,19 @@
+# Use existing docker image as a base. Alpine has
+# prerequisite filesystem and startup commands that will help us to build a container.
+FROM node:alpine
+
+# set working directory - all the further commands will be directed to here
+WORKDIR '/app'
+
+# Copy package.json - to optimize builds
+COPY package.json .
+
+# Download and install dependencies. Creating container.
+RUN npm install
+
+# Copy project from project folder to container: COPY [build context] [location inside container]
+# can be removed because we are using Docker volumes
+COPY . .
+
+# Tell the image what to do when it starts as a container.
+CMD ["npm", "run", "start"]
