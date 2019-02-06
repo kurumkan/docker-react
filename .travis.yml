@@ -1,0 +1,9 @@
+sudo: required # this is required for docker usage
+services:
+  - docker
+
+before_install: # before installing any dependencies
+  - docker build -t joomrise/docker-react -f Dockerfile.dev . # tagging our image and defining custom Dockerfile
+
+script: # build fails if any of the scripts bellow throws an error or returns non-0 value
+  - docker run joomrise/docker-react npm run test -- --coverage # coverage allows us to exit the tests and returns a status

@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Simple react app with docker
+Learning docker in practice.
+Frontend - React
+CI - Travis.CI
+Hosting - AWS
 
 ## Available Scripts
 
