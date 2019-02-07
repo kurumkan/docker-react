@@ -1,5 +1,5 @@
 # Simple react app with docker
-Learning docker in practice.
+With this project I wanted to learn more about Docker, CI systems and AWS deployment
 * Frontend - React
 * CI - Travis.CI
 * Hosting - AWS
