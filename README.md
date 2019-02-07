@@ -1,8 +1,8 @@
 # Simple react app with docker
 Learning docker in practice.
-Frontend - React
-CI - Travis.CI
-Hosting - AWS
+* Frontend - React
+* CI - Travis.CI
+* Hosting - AWS
 
 ## Available Scripts
 
